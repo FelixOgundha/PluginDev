@@ -11,7 +11,7 @@ on:
 jobs:
   test:
     name: Sample unit test
-    runs-on: Ubuntu_latest
+    runs-on: ubuntu_latest
 
     steps:
     - uses : actions/checkout@v2
