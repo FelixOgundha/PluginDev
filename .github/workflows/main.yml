@@ -15,11 +15,11 @@ jobs:
 
     steps:
     - uses : actions/checkout@v2
-      name: checkout respository
+    - name: checkout respository
 
-    - run: echo "hello world!" 
-      name: run script hello
-    - shell: bash
+    - name: run script hello
+      run: echo "hello world!" 
+      shell: bash
 
           
         
