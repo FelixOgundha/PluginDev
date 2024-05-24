@@ -1,31 +1,29 @@
-name: CI Workflow
-
+name: First workflow
 on: 
   workflow_dispatch:
   push:
     branches:
-      - main
+    - main
+
   pull_request:
     branches:
-      - main
+    - main
 
 jobs:
-  test:
-    name: Sample unit test
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Run hello world script
-      run: echo "hello world!"
-
   build:
-    name: Sample build test
+    name: build test
     runs-on: ubuntu-latest
 
     steps:
-    - name: Run build script
-      run: echo "I have a build running"
+    - uses: actions/checkout@v2
+      name: checkout repository
+
+    - name: Hello world test
+      run: echo "Hello World!"
       shell: bash
+
+
+
+
+    
+    
