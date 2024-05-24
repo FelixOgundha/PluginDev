@@ -1,12 +1,13 @@
-on: 
- workflow_dispatch:
- push:
-   branches:
-   - main
+name: CI Workflow
 
- pull_request:
-   branches:
-   - main
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   test:
@@ -14,13 +15,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses : actions/checkout@v2
-    - name: checkout respository
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-    - name: run script hello
-      run: echo "hello world!" 
+    - name: Run hello world script
+      run: echo "hello world!"
       shell: bash
-
-          
-        
-      
