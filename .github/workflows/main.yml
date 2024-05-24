@@ -2,23 +2,23 @@ on:
  workflow_dispatch:
  push:
    branches:
-   - 'main'
+   - main
 
  pull_request:
    branches:
-   - 'main'
+   - main
 
 jobs:
   test:
-    name: 'Sample unit test'
+    name: Sample unit test
     runs-on: Ubuntu_latest
 
     steps:
     - uses : actions/checkout@v2
-      name: 'checkout respository'
+      name: checkout respository
 
-    - run: 'echo "hello world!"'
-      name: 'run script hello'
+    - run: echo "hello world!" 
+      name: run script hello
     - shell: bash
 
           
