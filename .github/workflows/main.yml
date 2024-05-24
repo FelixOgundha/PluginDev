@@ -1,29 +1,35 @@
 name: First workflow
+
 on: 
   workflow_dispatch:
   push:
     branches:
-    - main
-
+      - main
   pull_request:
     branches:
-    - main
+      - main
 
 jobs:
   build:
-    name: build test
+    name: Build and Test on Ubuntu
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-      name: checkout repository
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-    - name: Hello world test
-      run: echo "Hello World!"
-      shell: bash
+      - name: Hello World Test on Ubuntu
+        run: echo "Hello World!"
+        shell: bash
 
+  build_windows:
+    name: Build and Test on Windows
+    runs-on: windows-latest
 
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-
-    
-    
+      - name: Hello World Test on Windows
+        run: echo "Hello World!"
+        shell: bash
