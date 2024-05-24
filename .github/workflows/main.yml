@@ -17,8 +17,8 @@ jobs:
         - uses : actions/checkout@v2
           name: 'checkout respository'
 
-        - name: 'hello job'
         - run: 'echo "hello world!"'
+          name: 'run script hello'
         - shell: bash
 
           
