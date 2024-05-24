@@ -20,4 +20,12 @@ jobs:
 
     - name: Run hello world script
       run: echo "hello world!"
+
+  build:
+    name: Sample build test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Run build script
+      run: echo "I have a build running"
       shell: bash
